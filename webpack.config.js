@@ -18,20 +18,11 @@ const config = {
             template: path.resolve(__dirname, './src/index.html')
         }),
         new webpack.NamedModulesPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: "vendor",
-            minChunks: function (module) {
-                return module.context && module.context.includes("node_modules");
-            }
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-            name: "manifest",
-            minChunks: Infinity
-        }),
+        new webpack.HotModuleReplacementPlugin()
     ],
     output: {
         filename: '[name].bundle.js',
+        // chunkFilename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
     devServer: {

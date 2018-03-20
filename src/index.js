@@ -1,6 +1,9 @@
-// import _ from 'lodash';
-// import axios from 'axios';
+import _ from 'lodash';
 
-// axios.get('https://api.github.com').then((response) => {
-//     console.log(response.data);
-// })
+// import ( /* webpackChunkName: "lodash" */ 'lodash').then(module => {
+    // var _ = module.default;
+    var data = _.join(['1','2'], '-');
+    console.log(data);
+// });
+
+
