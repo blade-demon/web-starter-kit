@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --inline --hot --open",
+    "start": "webpack-dev-server --mode development --inline --open",
     "build": "webpack --mode production"
   },
   "keywords": [
